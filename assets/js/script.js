@@ -1,4 +1,3 @@
-action("Welcome to my profile!");
 
 'use strict';
 
