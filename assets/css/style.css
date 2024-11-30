@@ -886,6 +886,13 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+[data-sidebar].active {
+  display: block !important;
+}
+
+[data-select].active {
+  display: block !important;
+}
 
 .filter-select.active .select-icon { transform: rotate(0.5turn); }
 
