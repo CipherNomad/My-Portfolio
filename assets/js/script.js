@@ -1,8 +1,10 @@
 'use strict';
+
 // Display welcome message on page load
-window.addEventListener("load", function () {
-  alert("Welcome to my portfolio!");
-});
+// window.addEventListener("load", function () {
+//   alert("Welcome to my portfolio!");
+// });
+
 // Element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
