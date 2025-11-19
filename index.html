@@ -44,38 +44,58 @@
       rel="stylesheet"
     />
 
-    <style>
-      /* Icon Pulse Animation */
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-          opacity: 0.9;
-        }
-        50% {
-          transform: scale(1.25);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 0.9;
-        }
-      }
+   <style>
+  /* =============================== */
+  /* ICON PULSE ANIMATION (unchanged) */
+  /* =============================== */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.25);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+  }
 
-      /* Hover Glow for Skill Cards */
-      .skills-item:hover {
-        border-color: var(--orange-yellow-crayola);
-        box-shadow: 0 0 12px var(--orange-yellow-crayola);
-        transform: translateY(-2px);
-        transition: 0.3s;
-      }
+  /* Make only the ICON pulse */
+  .skills-item ion-icon {
+    animation: pulse 2.2s infinite ease-in-out;
+  }
 
-      /* Desktop Grid: 2 Columns */
-      @media (min-width: 900px) {
-        .skills-list {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-    </style>
+  /* ================================================== */
+  /* FIXED HOVER GLOW — NO MOVEMENT, NO DISTORTION      */
+  /* ================================================== */
+  .skills-item {
+    border: 1px solid var(--jet);
+    border-radius: 12px;
+    transition: 0.25s ease;
+  }
+
+  .skills-item:hover {
+    border: 1px solid var(--orange-yellow-crayola);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+    transform: none; /* prevents distortion */
+    background-color: rgba(255, 215, 0, 0.05); /* subtle gold tint */
+  }
+
+  /* ================================================== */
+  /* TWO-COLUMN DESKTOP GRID (kept as you requested)    */
+  /* ================================================== */
+  @media (min-width: 900px) {
+    .skills-list {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 25px;
+    }
+  }
+</style>
+
   </head>
 
   <body>
