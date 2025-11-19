@@ -43,6 +43,39 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* Icon Pulse Animation */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.9;
+        }
+        50% {
+          transform: scale(1.25);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.9;
+        }
+      }
+
+      /* Hover Glow for Skill Cards */
+      .skills-item:hover {
+        border-color: var(--orange-yellow-crayola);
+        box-shadow: 0 0 12px var(--orange-yellow-crayola);
+        transform: translateY(-2px);
+        transition: 0.3s;
+      }
+
+      /* Desktop Grid: 2 Columns */
+      @media (min-width: 900px) {
+        .skills-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -687,725 +720,487 @@
           <section class="skill">
             <h3 class="h3 skills-title">My Skills</h3>
 
-            <style>
-              /* Inline animation (no external CSS editing) */
-              @keyframes glowBar {
-                0% {
-                  box-shadow: 0 0 4px rgba(255, 216, 107, 0.3);
-                }
-                50% {
-                  box-shadow: 0 0 12px rgba(255, 216, 107, 0.8);
-                }
-                100% {
-                  box-shadow: 0 0 4px rgba(255, 216, 107, 0.3);
-                }
-              }
-            </style>
-
-            <!-- =============== FRONTEND DEVELOPMENT ================= -->
-            <h4 class="h4" style="margin-top: 25px">Frontend Development</h4>
-            <ul class="skills-list content-card">
-              <!-- HTML5 -->
-              <li class="skills-item" style="margin-bottom: 18px">
+            <ul
+              class="skills-list content-card"
+              style="display: grid; gap: 20px; grid-template-columns: 1fr"
+            >
+              <!-- HTML -->
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
                 <div
+                  class="title-wrapper"
                   style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                   "
                 >
-                  <h5 class="h5" style="display: flex; align-items: center">
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
-                      name="logo-html5"
-                      style="margin-right: 6px"
+                      name="code-slash-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    HTML5
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
+                    <h5 class="h5">HTML5</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
-                    Expert
-                  </span>
                 </div>
-
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 90%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 90%"></div>
                 </div>
               </li>
 
               <!-- CSS -->
-              <li class="skills-item">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
                 <div
+                  class="title-wrapper"
                   style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                   "
                 >
-                  <h5 class="h5">
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
-                      name="logo-css3"
-                      style="margin-right: 6px"
+                      name="color-palette-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    CSS
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
+                    <h5 class="h5">CSS</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
-                    Advanced
-                  </span>
                 </div>
-
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 85%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 85%"></div>
                 </div>
               </li>
 
               <!-- JavaScript -->
-              <li class="skills-item" style="margin-top: 18px">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
                 <div
+                  class="title-wrapper"
                   style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                   "
                 >
-                  <h5 class="h5">
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
                       name="logo-javascript"
-                      style="margin-right: 6px"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    JavaScript
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
+                    <h5 class="h5">JavaScript</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
-                    Advanced
-                  </span>
                 </div>
-
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 80%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 85%"></div>
                 </div>
               </li>
 
-              <!-- React.js -->
-              <li class="skills-item" style="margin-top: 18px">
+              <!-- Tailwind -->
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
                 <div
+                  class="title-wrapper"
                   style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                   "
                 >
-                  <h5 class="h5">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <ion-icon
+                      name="sparkles-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
+                    ></ion-icon>
+                    <h5 class="h5">Tailwind CSS</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
+                  >
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <!-- React -->
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
+                <div
+                  class="title-wrapper"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
                       name="logo-react"
-                      style="margin-right: 6px"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    React.js
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
+                    <h5 class="h5">React.js</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
-                    Advanced
-                  </span>
                 </div>
-
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 78%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 75%"></div>
                 </div>
               </li>
 
               <!-- Next.js -->
-              <li class="skills-item" style="margin-top: 18px">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
                 <div
+                  class="title-wrapper"
                   style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                   "
                 >
-                  <h5 class="h5">
-                    <ion-icon
-                      name="rocket-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Next.js
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
-                  >
-                    Intermediate
-                  </span>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 65%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- Bootstrap -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                  "
-                >
-                  <h5 class="h5">
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
                       name="layers-outline"
-                      style="margin-right: 6px"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    Bootstrap
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
+                    <h5 class="h5">Next.js</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Intermediate</data
                   >
-                    Advanced
-                  </span>
                 </div>
-
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 75%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 65%"></div>
                 </div>
               </li>
 
-              <!-- Tailwind CSS -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div
-                  style="
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                  "
-                >
-                  <h5 class="h5">
-                    <ion-icon
-                      name="color-wand-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Tailwind CSS
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-weight: 600;
-                      font-size: 12px;
-                      opacity: 0.9;
-                    "
-                  >
-                    Advanced
-                  </span>
-                </div>
-
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 80%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-            </ul>
-
-            <!-- =============== BACKEND DEVELOPMENT ================= -->
-            <h4 class="h4" style="margin-top: 35px">Backend Development</h4>
-            <ul class="skills-list content-card">
               <!-- Node.js -->
-              <li class="skills-item">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
                 <div
+                  class="title-wrapper"
                   style="
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                   "
                 >
-                  <h5 class="h5">
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
                       name="server-outline"
-                      style="margin-right: 6px"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    Node.js
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
+                    <h5 class="h5">Node.js</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
                 </div>
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 78%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 80%"></div>
                 </div>
               </li>
 
               <!-- Express.js -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
+                <div
+                  class="title-wrapper"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
-                      name="git-merge-outline"
-                      style="margin-right: 6px"
+                      name="git-branch-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    Express.js
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
+                    <h5 class="h5">Express.js</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
                 </div>
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 75%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 78%"></div>
                 </div>
               </li>
 
               <!-- MongoDB -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
+                <div
+                  class="title-wrapper"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
-                      name="leaf-outline"
-                      style="margin-right: 6px"
+                      name="cube-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    MongoDB
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
+                    <h5 class="h5">MongoDB</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Intermediate</data
                   >
                 </div>
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 72%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- MySQL -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="library-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    MySQL
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 78%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- PostgreSQL -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="folder-open-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    PostgreSQL
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Intermediate</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 60%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-            </ul>
-
-            <!-- ================= PROGRAMMING & CS FUNDAMENTALS ================ -->
-            <h4 class="h4" style="margin-top: 35px">
-              Programming & CS Fundamentals
-            </h4>
-            <ul class="skills-list content-card">
-              <!-- Java -->
-              <li class="skills-item">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="logo-java"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Java
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 82%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- OOP -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="construct-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    OOP
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 82%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- DSA -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="git-branch-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Data Structures (DSA)
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 80%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- Algorithms -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="analytics-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Algorithms
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 78%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- OS -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="laptop-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Operating Systems (OS)
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 78%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 70%"></div>
                 </div>
               </li>
 
               <!-- CN -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
+                <div
+                  class="title-wrapper"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
-                      name="wifi-outline"
-                      style="margin-right: 6px"
+                      name="library-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    Computer Networks (CN)
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
+                    <h5 class="h5">Computer Networks</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
                 </div>
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 76%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+
+              <!-- OS -->
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
+                <div
+                  class="title-wrapper"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <ion-icon
+                      name="hardware-chip-outline"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
+                    ></ion-icon>
+                    <h5 class="h5">Operating Systems</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
+                  >
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 82%"></div>
                 </div>
               </li>
 
               <!-- DBMS -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="server-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    DBMS
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Advanced</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 80%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- System Design -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
+              <li
+                class="skills-item"
+                style="
+                  padding: 15px;
+                  border-radius: 12px;
+                  background: var(--eerie-black-1);
+                  border: 1px solid var(--jet);
+                  transition: 0.3s;
+                "
+              >
+                <div
+                  class="title-wrapper"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  "
+                >
+                  <div style="display: flex; align-items: center; gap: 8px">
                     <ion-icon
                       name="git-network-outline"
-                      style="margin-right: 6px"
+                      style="
+                        color: var(--orange-yellow-crayola);
+                        font-size: 18px;
+                        animation: pulse 1.5s infinite;
+                      "
                     ></ion-icon>
-                    System Design (Basics)
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Intermediate</span
+                    <h5 class="h5">DBMS</h5>
+                  </div>
+                  <data
+                    style="color: var(--orange-yellow-crayola); font-size: 12px"
+                    >Advanced</data
                   >
                 </div>
                 <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 65%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-            </ul>
-
-            <!-- ================= CLOUD & DEVOPS ================= -->
-            <h4 class="h4" style="margin-top: 35px">Cloud & DevOps</h4>
-            <ul class="skills-list content-card">
-              <!-- AWS -->
-              <li class="skills-item">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="cloud-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    AWS
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Intermediate</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 60%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- Cloud Computing -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="cloud-done-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    Cloud Computing
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Intermediate</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 65%; animation: glowBar 2.5s infinite"
-                  ></div>
-                </div>
-              </li>
-
-              <!-- DevOps -->
-              <li class="skills-item" style="margin-top: 18px">
-                <div style="display: flex; justify-content: space-between">
-                  <h5 class="h5">
-                    <ion-icon
-                      name="construct-outline"
-                      style="margin-right: 6px"
-                    ></ion-icon>
-                    DevOps
-                  </h5>
-                  <span
-                    style="
-                      color: var(--orange-yellow-crayola);
-                      font-size: 12px;
-                      font-weight: 600;
-                    "
-                    >Intermediate</span
-                  >
-                </div>
-                <div class="skill-progress-bg">
-                  <div
-                    class="skill-progress-fill"
-                    style="width: 63%; animation: glowBar 2.5s infinite"
-                  ></div>
+                  <div class="skill-progress-fill" style="width: 88%"></div>
                 </div>
               </li>
             </ul>
